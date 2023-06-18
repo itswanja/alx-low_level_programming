@@ -9,15 +9,17 @@ int main(void)
 
 	for (n = 48; n < 57; n++)
 	{
-		for (m = n + 1; m < 58; m++)
+		for (m = n + 1; m <= 57; m++)
 		{
+			if (n != m)
+			{
 			putchar(n);
 			putchar(m);
-
 			if (n == 56 && m == 57)
 			{
 				putchar(',');
 				putchar(' ');
+			}
 			}
 		}
 	putchar('\n');
