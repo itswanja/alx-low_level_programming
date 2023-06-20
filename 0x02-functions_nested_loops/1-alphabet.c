@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * main - a function that prints the alphabet, in lowercase, followed by a new line.
+ *print_alphabet - Print alphabet
  */
 void print_alphabet(void)
 {
 	int i;
 
-	for (i = 97; i <=122; i++)
+	for (i = 97; i <= 122; i++)
 	{
 		_putchar(i);
 	}
