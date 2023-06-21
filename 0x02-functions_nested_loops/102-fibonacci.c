@@ -18,11 +18,11 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
-		if (count == 49)
-			printf("\n");
-		else
+		if (count != 49)
 			printf(",");
 			printf(" ");
+		else
+			printf("\n");
 	}
 	return (0);
 }
