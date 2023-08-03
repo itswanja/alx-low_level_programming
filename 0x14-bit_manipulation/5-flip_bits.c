@@ -5,18 +5,16 @@
  * you would need to flip to get from one number to another
  * @n: first number
  * @m: second number
+ * Return: 
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int i, count = 0;
-	unsigned long int current;
-	unsigned long int exclusive = n ^ m;
+	unsigned int nbits;
 
-	for (i = 63; i >= 0; i--)
+	for (nbits = 0; n || m; n >>= 1, m >>= 1)
 	{
-		current = exclusive >> 1;
-		if (current & 1)
-			count++;
+		if ((n & 1) != (m & 1))
+			nbits++;
 	}
-	return (count);
+	return (nbits);
 }
